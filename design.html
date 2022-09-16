@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas semánticas, CSS Grid </title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<header>
+
+    <body>
+        <nav>
+            <ul class="nav">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Temas</a>
+                    <ul>
+                        <li><a href="">Tema 1</a></li>
+                        <li><a href="">Tema 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Recursos Digitales</a>
+                    <ul>
+                        <li><a href="">Recurso 1</a></li>
+                        <li><a href="">Recurso 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Aprendizaje</a>
+                    <ul>
+                        <li><a href="">Actividad 1</a></li>
+                        <li><a href="">Actividad 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Acarca de</a>
+                    <ul>
+                        <li> Nombre: ALEXANDER FRANCO </li>
+                        <li> Programa actual: INGENIERIA DE SISTEMAS</li>
+                        <li> Correo: afrancoa@unadvirtual.edu.co </li> 
+                        <li> Tutor: JOSUE IGNACIO OCHOA TORRES</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+</header>
+<section>
+    <h2>¿Que es una etiqueta html?</h2>
+    <p>
+        Antes de entrar en materia, conviene explicar de que vamos a hablar. Las etiquetas HTML son pequeños bloques de
+        código, que indican al navegador como debe interpretar el contenido recogido entre dichas etiquetas. Por
+        ejemplo, si queremos «pintar» un párrafo de texto, hay una etiqueta especifica para que el navegador interprete
+        ese texto como un párrafo. Estas etiquetas cuentan además con <strong>atributos</strong> que podemos añadir y
+        que en sí, pueden
+        determinar como será el comportamiento específico que tendrá la etiqueta. Te dejo por aquí un listado de
+        atributos HTML para complementar esta entrada.
+    </p>
+
+    <p>
+        das las etiquetas HTML están compuestas por una <strong>etiqueta de apertura</strong> , y una <strong>etiqueta
+            de cierre</strong> . Aunque hay
+        excepciones, como por ejemplo la etiqueta para cargar una imagen que son llamadas etiquetas huérfanas, ya que
+        solo tienen etiqueta de apertura
+
+    </p>
+
+
+    <h2>Etiqueta Iniciales o de Raiz</h2>
+    <p>
+        <strong>&lt;!DOCTYPE html&gt;</strong> Indica al navegador que el documento está basado en el estándar HTML5.
+
+    </p>
+    <p>
+        <strong>&lt;html&gt; &lt;html&gt; </strong> Representa la raíz de un documento HTML. Todos los demás elementos
+        de la estructura HTML deben ser recogidos dentro de estas etiquetas.
+    </p>
+
+    <h2>Metadatos del Documento</h2>
+    <div>
+        <p>
+            <strong>&lt;head&gt;&lt;/head&gt;</strong> Representa una colección de metadatos acerca del documento,
+            incluyendo enlaces a, o definiciones
+            de, scripts y hojas de estilo. El resto de etiquetas de metadatos, irán recogidas dentro de las etiquetas de
+            apertura y cierre del head. Importante explicar que estos metadatos del documento, es información para el
+            navegador y no contenido que será visible en la página web. A excepción de la etiqueta <strong>&lt;title
+                </title>&gt;</strong> que veremos a
+            continuación
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;title&gt;&lt;/title&gt;</strong> Etiqueta usada para definir el título de la página web
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;link&gt;</strong> Se usa para enlazar recursos externos al documento HTML. El ejemplo más común
+            son <strong>las hojas de estilos CSS</strong>
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;meta&gt;</strong> Etiqueta usada para definir otros metadatos que no se pueden definir con una
+            etiqueta HTML especifica. Por ejemplo para definir el autor del sitio, o la descripción del mismo.
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;style&gt;&lt;/style&gt;</strong> Etiquetas usadas para introducir código CSS en línea, es decir,
+            en el propio documento HTML
+        </p>
+    </div>
+
+
+    <h2>Etiquetas de secciones o para estructurar el HTML</h2>
+    <div>
+        <p>
+
+            <strong>&lt;body&gt;&lt;/body&gt;</strong>Al contrario que la etiqueta de metadatos
+            <strong>&lt;head&gt;</strong>, todo lo que quieras mostrar en la página web debe ir recogido dentro de las
+            etiquetas de apertura y cierre de
+            <strong>&lt;body&gt;</strong>.<strong>Este contenido será el que se muestre en la web</strong>
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;nav&gt; &lt;/nav&gt;</strong> Usadas para definir el contenido que será la sección de navegación
+            de la web
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <strong>&lt;main&gt;&lt;/main&gt;</strong> Se usa para definir el contenido principal del documento.
+            Solamente puede existir uno por documento
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <strong>&lt;section&gt;&lt;/section&gt;</strong> Define una sección del documento
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <strong>&lt;article&gt;&lt;/article&gt;</strong> Define contenido independiente de la web.
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <strong>&lt;aside&gt;&lt;/aside&gt;</strong> Dentro de estas etiquetas suele alojarse el contenido adicional
+            de la web. Suele ser contenido relacionado con la web pero de poca importancia
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <strong>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;</strong> Son etiquetas HTML muy
+            importantes, ya que son usadas para jerarquizar el contenido de la web. Las etiquetas se usan para explicar
+            brevemente el contenido que irá a continuación
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;header&gt;&lt;/header&gt;</strong> Se usan para definir la cabecera la página web. Suele
+            contener el logotipo, menú de navegación, etc.
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <strong>&lt;footer&gt;&lt;/footer&gt;</strong> Usadas para definir el pie de página.
+        </p>
+    </div>
+
+    <h2>Etiquetas para la agrupación de contenido</h2>
+
+    <div>
+        <p>
+            <strong>&lt;p&gt;&lt;/p&gt;</strong> Etiqueta usada para escribir párrafos de texto.
+        </p>
+    </div>
+
+    <div>
+        <P>
+            <strong>&lt;hr&gt;</strong> Etiqueta utilizada para «romper» entre dos secciones de una web. Usada
+            comúnmente como separador.
+        </P>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;pre&gt;&lt;/pre&gt;</strong> Usada para pegar texto manteniendo el pre formato propio del texto.
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;blockquote&gt;&lt;/blockquote&gt;</strong> Se usan para indicar que el contenido es texto citado
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;ol&gt;&lt;/ol&gt;</strong> Etiquetas para crear una lista ordenada
+        </p>
+    </div>
+
+    <div>
+        <p>
+            <strong>&lt;ul&gt;&lt;/ul&gt;</strong> Etiquetas para crear una lista des-ordenada
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;uli&gt; &lt;/li&gt;</strong> Etiquetas que recogen el contenido de un elemento de una lista, sea
+            ordenada o no.
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;li&gt; &lt;/li&gt;</strong>Etiquetas que recogen el contenido de un elemento de una lista, sea
+            ordenada o no.
+        </p>
+    </div>
+    <div>
+        <p>
+            <strong>&lt;dl&gt; &lt;/dl&gt;</strong> Usada para crear una lista de definiciones
+        </p>
+    </div>
+
+
+    <h1>¿Que es Css Grid?</h1>
+
+    <p>
+        CSS Grid Layout es un sistema de rejilla en 2 dimensiones, creado dentro del lenguaje CSS. Es un estándar, lo
+        que quiere decir que no necesitas nada para que el navegador lo entienda. Para ponerlo en práctica necesitas
+        simplemente aplicar el nuevo "display: grid" y comenzar a usar sus potentes propiedades y valores CSS. Con ello
+        podrás controlar todos los aspectos imaginables de la rejilla, obteniendo prácticamente todo lo que se te ocurra
+        de una manera cómoda.
+    </p>
+
+    <h2>Sistema de rejilla en Css</h2>
+    <p>
+        CSS Grid Layout es un modelo de maquetación CSS en base a una rejilla, algo que podría no parecer tan novedoso,
+        si tenemos en cuenta que diversas librerías de CSS lo habían intentado ya. Sistemas como 960 Grid System fueron
+        pioneros en crear una base de código CSS para que los diseñadores pudieran posicionar los elementos en una
+        distribución de filas y columnas. El propio Bootstrap incluye entre otras cosas un sistema de rejilla.
+    </p>
+
+
+
+    <h1>Por qué Grid?</h1>
+
+    <p>
+        Con Grid hacemos que un elemento contenga la propiedad display:grid, lo que nos permitirá maquetar de una forma
+        mucho más fácil y potente que con cualquier otro tipo de propiedades.
+    </p>
+    <p>
+        Esto es así porque, al contrario que en <strong>otras formas de maquetación</strong> , en Grid podemos
+        establecer tanto las filas
+        como las columnas que va a tener el diseño, maquetación o layout, además no sólo en una dimensión, como con
+        Flexbox, sino que vamos a poder especificar la estructura en dos dimensiones.
+    </p>
+
+
+    <h1>Ejemplo de uso de Grid</h1>
+    <p>
+        Utilizado <Strong>propiedades Css</Strong> vamos a poder especificar la estructura de este tipo
+    </p>
+    <img src="img/grid.jpg" alt="">
+    <h1>Mochup</h1>
+    <div>
+        <img src="img/mockup.png" alt="">
+
+    </div>
+    </body>
+    <footer>
+        <p>Correo:afrancoa@unadvirtual.edu.co</p>
+        <P>Fecha Actualización:11/02/2022</P>
+    </footer>
+
+</html>
